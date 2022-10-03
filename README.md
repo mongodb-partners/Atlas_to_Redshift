@@ -46,6 +46,11 @@ e) MongoDB Atlas cluster [for free cluster creation](https://www.mongodb.com/doc
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/01.One-Time%20Data%20Load.png)
 
 ### Step by Step Instruction
+
+Create a [MongoDB Atlas cluster](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster)
+
+Create a [Redshift database] (https://docs.aws.amazon.com/redshift/latest/gsg/t_creating_database.html) 
+
 Use the [Pyspark job](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/Scripts/pyspark_atlastoredshift_customeractivity.py) template to move the data from Atlas to Redshift.
 
 
