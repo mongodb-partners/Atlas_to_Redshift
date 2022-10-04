@@ -54,7 +54,7 @@ e) MongoDB Atlas cluster [for free cluster creation](https://www.mongodb.com/doc
 
 Create a [MongoDB Atlas cluster](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster)
 
-Configure the MongoDB Atlas cluster [access](https://www.mongodb.com/docs/atlas/tutorial/create-mongodb-user-for-cluster/) and [network security](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/).
+Configure the MongoDB Atlas cluster [network security](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/) and [access](https://www.mongodb.com/docs/atlas/tutorial/create-mongodb-user-for-cluster/) .
 
 Load the sample customer_activity data to a collection
 
