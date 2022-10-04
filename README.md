@@ -58,7 +58,7 @@ Configure the MongoDB Atlas cluster [access](https://www.mongodb.com/docs/atlas/
 
 Load the sample customer_activity data to a collection
 
-Create a [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-sample-data-load-create-cluster.html)
+Create a [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html)
 
 Create a table using the script.
 
