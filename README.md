@@ -60,6 +60,8 @@ Load the sample customer_activity data to a collection
 
 Create a [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html)
 
+Configure the Amazon Redshift Cluster [network security](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-authorize-cluster-access.html) and [access](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html) .
+
 Create a table using the script.
 
 Use the AWS Glue Studio jobs feature to load data from MongoDB Atlas to Redshift    
