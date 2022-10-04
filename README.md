@@ -62,7 +62,7 @@ Create a [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/
 
 Configure the Amazon Redshift Cluster [network security](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-authorize-cluster-access.html) and [access](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html) .
 
-Create a table using the [script](https://github.com/mongodb-partners/Atlas_to_Redshift/commit/3be5085ec4befda936ba141a22822f122d75ed8d).
+Create a table using the [script](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/data/create_customer_activity.sql).
 
 Use the AWS Glue Studio [job](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py)  to load data from MongoDB Atlas to Redshift    
 
