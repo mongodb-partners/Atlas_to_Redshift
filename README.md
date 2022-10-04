@@ -51,7 +51,7 @@ Create a [MongoDB Atlas cluster](https://www.mongodb.com/docs/atlas/tutorial/dep
 
 Create a [Redshift database](https://docs.aws.amazon.com/redshift/latest/gsg/t_creating_database.html) 
 
-Use the [Pyspark job](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/Scripts/pyspark_atlastoredshift_customeractivity.py) template to move the data from Atlas to Redshift.
+Use the AWS Glue Studio jobs feature to execture  [Pyspark job](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/Scripts/pyspark_atlastoredshift_customeractivity.py) template to move the data from Atlas to Redshift.
 
 
 
