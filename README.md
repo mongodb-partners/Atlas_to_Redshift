@@ -49,9 +49,15 @@ e) MongoDB Atlas cluster [for free cluster creation](https://www.mongodb.com/doc
 
 Create a [MongoDB Atlas cluster](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster)
 
-Create a [Redshift database](https://docs.aws.amazon.com/redshift/latest/gsg/t_creating_database.html) 
+Load the sample customer_activity data to a collection
 
-Use the AWS Glue Studio jobs feature to execture  [Pyspark job](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/Scripts/pyspark_atlastoredshift_customeractivity.py) template to move the data from Atlas to Redshift.
+Create a [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-sample-data-load-create-cluster.html)
+
+Create a table using the script.
+
+Use the AWS Glue Studio jobs feature to load data from MongoDB Atlas to Redshift    
+
+[Pyspark job](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/Scripts/pyspark_atlastoredshift_customeractivity.py)
 
 
 
