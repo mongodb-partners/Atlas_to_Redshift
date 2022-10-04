@@ -31,10 +31,15 @@ In this demonstration we attempt to provided step by step approach for each of t
 
 ## Pre-requisite: 
 a) Good understanding of AWS Redshift , Glue and S3 services
+
 b) Good understanding of MongoDB Atlas and Application services
+
 c) VPC and Network settings are already setup as per the secuirty standards.
+
 c) Redshift Database 
+
 d) S3 bucket to store the json files
+
 e) MongoDB Atlas cluster [for free cluster creation](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster/)
 
 
@@ -48,6 +53,8 @@ e) MongoDB Atlas cluster [for free cluster creation](https://www.mongodb.com/doc
 ### Step by Step Instruction
 
 Create a [MongoDB Atlas cluster](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster)
+
+Configure the MongoDB Atlas cluster [access](https://www.mongodb.com/docs/atlas/tutorial/create-mongodb-user-for-cluster/) and [network security](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/).
 
 Load the sample customer_activity data to a collection
 
