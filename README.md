@@ -68,17 +68,36 @@ Use the AWS Glue Studio [job](https://github.com/mongodb-partners/Atlas_to_Redsh
 
 Create a AWS Glue connection with the Amazon Redshift Database
 
+
+Select "Connector" from the left side menu of AWS Glue Studio. Click "Create Connection" to create a new connection.
+
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueConnection1.png)
+
+
+
+Provide a name for the connection, select "Amazone Redshift" for connection type, the Redshift credential created in the last step.
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueConnection2.png)
 
-Create and run a crawler.
+
+
+Create and run a AWS Glue - Crawler.
+
+Open the AWS Glue Crawler, by selecting the "Crawler" option on the left side menu of "AWS Glue"
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler1.png)
 
+Select a name from the crawler
+
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler2.png)
 
+
+click on "Add a data source"
+
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler3.png)
+
+
+Configure the data source in the pop screen. 
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler4.png)
 
