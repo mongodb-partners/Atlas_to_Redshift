@@ -69,29 +69,33 @@ Use the AWS Glue Studio [job](https://github.com/mongodb-partners/Atlas_to_Redsh
 Create a AWS Glue connection with the Amazon Redshift Database
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueConnection1.png)
+
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueConnection2.png)
 
 Create and run a crawler.
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler1.png)
+
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler2.png)
+
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler3.png)
+
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler4.png)
+
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler5.png)
+
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler6.png)
+
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler7.png)
+
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler8.png)
+
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler9.png)
+
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler10.png)
 
 
-
-
-
-
-For setting up the AWS Glue Studio Jobs, pls refer [link](https://github.com/mongodb-partners/S3toAtlas)
-
-
+Run the AWS Glue Studio job using 
 
 ##  Real-Time Data Sync 
 
