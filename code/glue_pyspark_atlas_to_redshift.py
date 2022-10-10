@@ -28,63 +28,26 @@ job = Job(glueContext)
 job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
-## Read from the MongoDB Atlas ###
+## setup the MongoDB Credentials ###
 
-mongo_uri = "mongodb+srv://<mongodbservername>/?retryWrites=true&w=majority" ####update the servername
+mongo_uri = "mongodb+srv://s3load.frzascf.mongodb.net/?retryWrites=true&w=majority'" ####update the servername
 
 ## Read from the MongoDB Atlas ###
 read_mongo_options = {
     "uri": mongo_uri,
-    "database": "<databasename>",   #update the databasename
-    "collection": "<collectionname>", #update the collection
-    "username": "<username>",  #update the username
-    "password": "<password>"  #update the password
+    "database": "customer_activity",   #update the databasename
+    "collection": "source", #update the collection
+    "username": "s3load",  #update the username
+    "password": "s3load"  #update the password
 }
+
+## Read from the MongoDB Atlas ###
 
 mongodb_atlas_ds = glueContext.create_dynamic_frame.from_options(connection_type="mongodb", connection_options= read_mongo_options)
 
 # Script generated for node ApplyMapping
-ApplyMapping_node2 = ApplyMapping.apply(
-    frame=mongodb_atlas_ds,
-    mappings=[
-        ("record_date", "string", "record_date", "string"),
-        ("vmail_plan", "string", "vmail_plan", "string"),
-        ("day_charge", "double", "day_charge", "double"),
-        ("area_code", "string", "area_code", "string"),
-        ("account_length", "int", "account_length", "string"),
-        ("churn", "string", "churn", "string"),
-        ("cust_serv_calls", "int", "cust_serv_calls", "long"),
-        ("night_mins", "double", "night_mins", "double"),
-        ("intl_plan", "string", "intl_plan", "string"),
-        ("total_charge", "double", "total_charge", "double"),
-        ("day_calls", "int", "day_calls", "string"),
-        ("night_charge", "double", "night_charge", "double"),
-        ("eve_mins", "double", "eve_mins", "double"),
-        ("intl_charge", "double", "intl_charge", "double"),
-        ("phone", "string", "phone", "string"),
-        ("eve_calls", "int", "eve_calls", "string"),
-        ("night_calls", "int", "night_calls", "string"),
-        ("_id", "string", "_id", "string"),
-        ("state", "string", "state", "string"),
-        ("vmail_message", "int", "vmail_message", "string"),
-        ("eve_charge", "double", "eve_charge", "double"),
-        ("intl_mins", "double", "intl_mins", "double"),
-        ("day_mins", "double", "day_mins", "double"),
-        ("intl_calls", "int", "intl_calls", "string"),
-        ("date", "string", "date", "string"),
-        ("hour", "string", "hour", "string"),
-        ("mm", "string", "mm", "string"),
-    ],
-    transformation_ctx="ApplyMapping_node2",
-)
+applymapping1 = ApplyMapping.apply(frame = mongodb_atlas_ds, mappings = [("state", "string", "state", "string"), ("account_length", "int", "account_length", "int"), ("area_code", "int", "area_code", "int"), ("phone", "string", "phone", "string"), ("intl_plan", "string", "intl_plan", "string"), ("vmail_plan", "string", "vmail_plan", "string"), ("vmail_message", "int", "vmail_message", "int"), ("day_mins", "double", "day_mins", "double"), ("day_calls", "int", "day_calls", "int"), ("day_charge", "double", "day_charge", "double"), ("total_charge", "double", "total_charge", "double"), ("eve_mins", "double", "eve_mins", "double"), ("eve_calls", "int", "eve_calls", "int"), ("eve_charge", "double", "eve_charge", "double"), ("night_mins", "double", "night_mins", "double"), ("night_calls", "int", "night_calls", "int"), ("night_charge", "double", "night_charge", "double"), ("intl_mins", "double", "intl_mins", "double"), ("intl_calls", "int", "intl_calls", "int"), ("intl_charge", "double", "intl_charge", "double"), ("cust_serv_calls", "int", "cust_serv_calls", "int"), ("churn", "string", "churn", "string"), ("record_date", "string", "record_date", "string")], transformation_ctx = "applymapping1")
 
-# Script generated for node Amazon Redshift
-AmazonRedshift_node = glueContext.write_dynamic_frame.from_catalog(
-    frame=ApplyMapping_node2,
-    database="<database>",  # Update the database 
-    table_name="<tablename>",  # update the tablename  dev_public_tablenmae
-    redshift_tmp_dir=args["TempDir"],
-    transformation_ctx="AmazonRedshift_node",
-)
-
+## write to Redshift Cluster ###
+redshift_datasink = glueContext.write_dynamic_frame.from_jdbc_conf(frame = applymapping1, catalog_connection = "RedshiftConnection", connection_options = {"dbtable": "customer_activity_testing", "database": "dev"}, redshift_tmp_dir = args["TempDir"], transformation_ctx = "redshift_datasink")
 job.commit()
