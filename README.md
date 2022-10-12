@@ -21,13 +21,13 @@ Thus the coexistence of Atlas and Redshift evolves as the perfect fit for the bu
 The data from/to MongoDB Atlas can be migrated in two step approach
 
 ### Step 1: One-Time Load
-MongoDB Atlas has direct connectors with  Apache Spark. Using the spark connectors the data is migrated from MongoDB Atlas to Redshift at one time
+MongoDB Atlas has direct connectors with  Apache Spark. Using the spark connectors the data is migrated from MongoDB Atlas to Redshift as one time load.
 
 ### Step2: Real-Time Data Sync
-With the help of the MongoDB Atlas triggers, the data changes in the database can be continuously written to S3 bucket.
+With the help of the MongoDB Atlas triggers or AWS MSK,  any delta changes to the database can be continuously written to S3 bucket.
 From the S3 bucket data can be loaded into the Redshift either through schedule AWS Glue jobs or can be accessed as an external tables.
 
-In this demonstration we attempt to provided step by step approach for each of these scenarios.
+In this demonstration we provided step by step approach for each of these scenarios.
 
 ## Pre-requisite: 
 a) Good understanding of AWS Redshift , Glue and S3 services
@@ -36,11 +36,15 @@ b) Good understanding of MongoDB Atlas and Application services
 
 c) VPC and Network settings are already setup as per the secuirty standards.
 
-c) Redshift Database 
+d) Redshift Database 
 
-d) S3 bucket to store the json files
+e) S3 bucket to store the json files
 
-e) MongoDB Atlas cluster [for free cluster creation](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster/)
+f) MongoDB Atlas cluster [for free cluster creation](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster/)
+
+g) Tools: [VSCode](https://code.visualstudio.com/), [MongoDB Compass](https://www.mongodb.com/products/compass), [Docker](https://www.docker.com/)
+
+
 
 
 
@@ -56,13 +60,13 @@ Create a [MongoDB Atlas cluster](https://www.mongodb.com/docs/atlas/tutorial/dep
 
 Configure the MongoDB Atlas cluster [network security](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/) and [access](https://www.mongodb.com/docs/atlas/tutorial/create-mongodb-user-for-cluster/) .
 
-Load the sample [customer_activity](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/data/customer_activity.json) data to a collection
+Load the sample [customer_activity](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/data/customer_activity.json) data to a collection using [MongoDB Compass](https://www.mongodb.com/docs/compass/current/import-export/)
 
 Create a [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html)
 
 Configure the Amazon Redshift Cluster [network security](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-authorize-cluster-access.html) and [access](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html) .
 
-Create a table using the [script](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/data/create_customer_activity.sql).
+Note down the user name and password.
 
 Use the AWS Glue Studio [job](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py)  to load data from MongoDB Atlas to Redshift
 
