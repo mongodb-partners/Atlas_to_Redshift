@@ -68,9 +68,9 @@ e. Configure the Amazon Redshift Cluster [network security](https://docs.aws.ama
 
 f. Note down the user name and password.
 
-g. Use the AWS Glue Studio [job](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py)  to load data from MongoDB Atlas to Redshift
+g. create AWS role with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies and note down the role name.
 
-h. Create a AWS Glue connection with the Amazon Redshift Database
+g. Create a AWS Glue connection with the Amazon Redshift Database
 
 
 Select "Connector" from the left side menu of AWS Glue Studio. Click "Create Connection" to create a new connection.
@@ -84,19 +84,21 @@ Provide a name for the connection, select "Amazone Redshift" for connection type
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueConnection2.png)
 
 
-i. Create a glue job in AWS Glue studio
+h. Create a glue job in AWS Glue studio
 
-j. select the Spark script editor and click "Create"
+i. select the Spark script editor and click "Create"
 
-k. copy the code from link to the code editor
+j. copy the code from link to the "script" tab. Overwrite if there is a template code available already.
 
-l. configure the job name and aws role. You can keep all the other parameters as default.
+k. update the connection details for MongoDB URI and Database credentials.
 
-m. save the job and click "Run"
+m. configure the job name and aws role in "Job details" tab. You can keep all the other parameters as default.
 
-n. Ensure the job ran successfully 
+l. save the job and click "Run"
 
-o. validate the table and data in Redshift.
+m. Ensure the job ran successfully 
+
+n. validate the table and data in Redshift.
 
 
 ##  Real-Time Data Sync 
