@@ -141,11 +141,16 @@ We can migrate the near real-time data to s3 bucket and then to Redshift by foll
 
 ### Step by Step Instruction for setting up Amazon MSK Job
 
-a. create a MSK Cluster
-b. create a custom plugins for MongoDB Atlas(source) using the zipfile
-c. create a custom plugin for S3(sink) using zipfile
+a. create a [MSK Cluster](https://docs.aws.amazon.com/msk/latest/developerguide/create-cluster.html)
+
+b. create a [custom plugins](https://docs.aws.amazon.com/msk/latest/developerguide/msk-connect-plugins.html) for MongoDB Atlas(source) using the [zipfile](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/Scripts/Mongo-Kafka-connector.zip)
+
+c. create a [custom plugins](https://docs.aws.amazon.com/msk/latest/developerguide/msk-connect-plugins.html) for S3(sink) using [zipfile](https://www.confluent.io/hub/confluentinc/kafka-connect-s3#:~:text=will%20be%20run.-,Download,-By%20downloading%20you)
+
 d. create a source connector to MongoDB Atlas using the custom plugin and code
+
 e. create a sink connector to S3 bucket using the custom plugin and code.
+
 f. insert the data to MongoDB Atlas collection and ensure the data are written to S3 bucket.
 
 
