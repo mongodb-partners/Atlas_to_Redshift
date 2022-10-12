@@ -86,13 +86,27 @@ Provide a name for the connection, select "Amazone Redshift" for connection type
 
 h. Create a glue job in AWS Glue studio
 
+
 i. select the Spark script editor and click "Create"
+
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob1.png)
+
 
 j. copy the code from link to the "script" tab. Overwrite if there is a template code available already.
 
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob2.png)
+
+
+
 k. update the connection details for MongoDB URI and Database credentials.
 
+
+
 m. configure the job name and aws role in "Job details" tab. You can keep all the other parameters as default.
+
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/gluejob3.png)
+
+
 
 l. save the job and click "Run"
 
