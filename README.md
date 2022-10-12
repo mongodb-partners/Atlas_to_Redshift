@@ -120,10 +120,16 @@ n. validate the table and data in Redshift.
 ##  Real-Time Data Sync 
 
 
-The Change Data Capture feature of MongoDB Atlas is utilized to capture the real-time data. Utilizing the Atlas Application Services and Data Federation's $out feature to write to S3 bucket, we capture the change data to S3 continuously.
+The Change Data Capture feature of MongoDB Atlas is utilized to capture the real-time data. 
+We can migrate the near real-time data to s3 bucket and then to Redshift by following methods
 
 
 ### Architecture diagram 
+
+
+#### with Amazon Managed Streaming for Apache Kafka (Amazon MSK)
+
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/MSKArchitecture.png)
 
 
 #### With Glue: 
