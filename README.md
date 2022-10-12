@@ -56,21 +56,21 @@ g) Tools: [VSCode](https://code.visualstudio.com/), [MongoDB Compass](https://ww
 
 ### Step by Step Instruction
 
-Create a [MongoDB Atlas cluster](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster)
+a. Create a [MongoDB Atlas cluster](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster)
 
-Configure the MongoDB Atlas cluster [network security](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/) and [access](https://www.mongodb.com/docs/atlas/tutorial/create-mongodb-user-for-cluster/) .
+b. Configure the MongoDB Atlas cluster [network security](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/) and [access](https://www.mongodb.com/docs/atlas/tutorial/create-mongodb-user-for-cluster/) .
 
-Load the sample [customer_activity](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/data/customer_activity.json) data to a collection using [MongoDB Compass](https://www.mongodb.com/docs/compass/current/import-export/)
+c. Load the sample [customer_activity](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/data/customer_activity.json) data to a collection using [MongoDB Compass](https://www.mongodb.com/docs/compass/current/import-export/)
 
-Create a [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html)
+d. Create a [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html)
 
-Configure the Amazon Redshift Cluster [network security](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-authorize-cluster-access.html) and [access](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html) .
+e. Configure the Amazon Redshift Cluster [network security](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-authorize-cluster-access.html) and [access](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html) .
 
-Note down the user name and password.
+f. Note down the user name and password.
 
-Use the AWS Glue Studio [job](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py)  to load data from MongoDB Atlas to Redshift
+g. Use the AWS Glue Studio [job](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py)  to load data from MongoDB Atlas to Redshift
 
-Create a AWS Glue connection with the Amazon Redshift Database
+h. Create a AWS Glue connection with the Amazon Redshift Database
 
 
 Select "Connector" from the left side menu of AWS Glue Studio. Click "Create Connection" to create a new connection.
@@ -84,41 +84,20 @@ Provide a name for the connection, select "Amazone Redshift" for connection type
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueConnection2.png)
 
 
+i. Create a glue job in AWS Glue studio
 
-Create and run a AWS Glue - Crawler.
+j. select the Spark script editor and click "Create"
 
-Open the AWS Glue Crawler, by selecting the "Crawler" option on the left side menu of "AWS Glue"
+k. copy the code from link to the code editor
 
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler1.png)
+l. configure the job name and aws role. You can keep all the other parameters as default.
 
-Select a name from the crawler
+m. save the job and click "Run"
 
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler2.png)
+n. Ensure the job ran successfully 
 
+o. validate the table and data in Redshift.
 
-click on "Add a data source"
-
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler3.png)
-
-
-Configure the data source in the pop screen. 
-
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler4.png)
-
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler5.png)
-
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler6.png)
-
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler7.png)
-
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler8.png)
-
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler9.png)
-
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueCrawler10.png)
-
-
-Run the AWS Glue Studio job using 
 
 ##  Real-Time Data Sync 
 
