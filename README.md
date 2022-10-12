@@ -217,11 +217,11 @@ update the destination configuration
 
 The scripts for the conversions are created automatically.
 
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob8.png)
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob9.png)
 
 update the job details tab with job name and role. all other parameters are kept as default.
 
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob9.png)
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob8.png)
 
 Run the job and ensure it's successful completion. Use the logs and Error logs generated for debugging. (if required)
 
