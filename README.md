@@ -24,7 +24,7 @@ The data from/to MongoDB Atlas can be migrated in two step approach
 MongoDB Atlas has direct connectors with  Apache Spark. Using the spark connectors the data is migrated from MongoDB Atlas to Redshift as one time load.
 
 ### Step2: Real-Time Data Sync
-With the help of the MongoDB Atlas triggers or AWS MSK,  any delta changes to the database can be continuously written to S3 bucket.
+With the help of the MongoDB Atlas triggers or Amazon MSK,  any delta changes to the database can be continuously written to S3 bucket.
 From the S3 bucket data can be loaded into the Redshift either through schedule AWS Glue jobs or can be accessed as an external tables.
 
 In this demonstration we provided step by step approach for each of these scenarios.
@@ -124,9 +124,6 @@ The Change Data Capture feature of MongoDB Atlas is utilized to capture the real
 We can migrate the near real-time data to s3 bucket and then to Redshift by following methods
 
 
-### Architecture diagram 
-
-
 #### with Amazon Managed Streaming for Apache Kafka (Amazon MSK)
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/MSKArchitecture.png)
@@ -140,6 +137,9 @@ We can migrate the near real-time data to s3 bucket and then to Redshift by foll
 #### with Redshift Spectrum (External Table)
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/11.AWS%20Glue%20s3tocatalog%20Connections%204.png)
+
+
+### Step by Step Instruction for setting up Amazon MSK Job
 
 
 ### Step by Step Instruction for setting up Glue Job
