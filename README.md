@@ -141,6 +141,13 @@ We can migrate the near real-time data to s3 bucket and then to Redshift by foll
 
 ### Step by Step Instruction for setting up Amazon MSK Job
 
+a. create a MSK Cluster
+b. create a custom plugins for MongoDB Atlas(source) using the zipfile
+c. create a custom plugin for S3(sink) using zipfile
+d. create a source connector to MongoDB Atlas using the custom plugin and code
+e. create a sink connector to S3 bucket using the custom plugin and code.
+f. insert the data to MongoDB Atlas collection and ensure the data are written to S3 bucket.
+
 
 ### Step by Step Instruction for setting up Glue Job
 1. The data from MongoDB Atlas can be continuously written to S3 bucket using the Data Federation and MongoDB Atlas triggers. 
@@ -187,24 +194,34 @@ Click the "Tables" menu from the left side and ensure the required tables are cr
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/08.AWS%20Glue%20Redshift%20Crawler%209.png)
 
-c.Now we are all set to create the Job to map and populate the redshift tables. Click " Jobs (legacy)" from the left side menu and click "Add job". Fill all the information required for creating the job, by taking the reference from screenshots attached.
+c.Now we are all set to create the Job to map and populate the redshift tables. 
+  Click " Jobs" from the left side menu and select "Visual with a source and target"
+  
+  select S3 bucket as source and Redshift as target from the dropdown.
 
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/09.AWS%20Glue%20Job%2001.png)
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/09.AWS%20Glue%20Job%2002.png)
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/09.AWS%20Glue%20Job%2003.png)
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/09.AWS%20Glue%20Job%2004.png)
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob4.png)
 
-Select the option of creating a new table in the destination. Select the Redshift connection and the Database name you already created in the Redshift (as part of the pre-requisite).
 
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/09.AWS%20Glue%20Job%2005.png)
+update the source configuration
+
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob5.png)
+
 
 Validate the mapping and alter as required.
 
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/09.AWS%20Glue%20Job%2006.png)
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob6.png)
 
-The scripts for the conversions are created automatically and allowed for edit. Change the Redshift database table name to customer_activity.
+update the destination configuration
 
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/09.AWS%20Glue%20Job%2007.png)
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob7.png)
+
+The scripts for the conversions are created automatically.
+
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob8.png)
+
+update the job details tab with job name and role. all other parameters are kept as default.
+
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob9.png)
 
 Run the job and ensure it's successful completion. Use the logs and Error logs generated for debugging. (if required)
 
