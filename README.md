@@ -114,6 +114,8 @@ m. Ensure the job ran successfully
 
 n. validate the table and data in Redshift.
 
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/redshiftoutput.png)
+
 
 ##  Real-Time Data Sync 
 
