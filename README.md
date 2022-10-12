@@ -147,9 +147,9 @@ b. create a [custom plugins](https://docs.aws.amazon.com/msk/latest/developergui
 
 c. create a [custom plugins](https://docs.aws.amazon.com/msk/latest/developerguide/msk-connect-plugins.html) for S3(sink) using [zipfile](https://www.confluent.io/hub/confluentinc/kafka-connect-s3#:~:text=will%20be%20run.-,Download,-By%20downloading%20you)
 
-d. create a source connector to MongoDB Atlas using the custom plugin and code
+d. create a [source connector](https://docs.aws.amazon.com/msk/latest/developerguide/msk-connect-connectors.html#:~:text=MSK%20Connect.-,Creating,-a%20connector) to MongoDB Atlas using the custom plugin and [code](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/Scripts/atlassourceconnector.txt)
 
-e. create a sink connector to S3 bucket using the custom plugin and code.
+e. create a [sink connector](https://docs.aws.amazon.com/msk/latest/developerguide/msk-connect-connectors.html#:~:text=MSK%20Connect.-,Creating,-a%20connector) to S3 bucket using the custom plugin and [code](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/Scripts/s3sinkconnector.txt).
 
 f. insert the data to MongoDB Atlas collection and ensure the data are written to S3 bucket.
 
