@@ -58,7 +58,7 @@ g) Tools: [VSCode](https://code.visualstudio.com/), [MongoDB Compass](https://ww
 
 a. Create a [MongoDB Atlas cluster](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster).
 
-b. Configure the MongoDB Atlas cluster [network security](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/) and [access](https://www.mongodb.com/docs/atlas/tutorial/create-mongodb-user-for-cluster/). Note down the [connection string](https://www.mongodb.com/docs/guides/atlas/connection-string/), user name and password to be referencenced in the [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=donwn%20in%20the-,previous%20step,-.%20Update%20the%20connection).
+b. Configure the MongoDB Atlas cluster [network security](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/) and [access](https://www.mongodb.com/docs/atlas/tutorial/create-mongodb-user-for-cluster/). Note down the [connection string](https://www.mongodb.com/docs/guides/atlas/connection-string/), user name and password to be referencenced in the [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=noted%20donwn%20in-,the%20previous%20step,-.%20Update%20the%20Database).
 
 c. Load the sample [customer_activity](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/data/customer_activity.json) data to a collection using [MongoDB Compass](https://www.mongodb.com/docs/compass/current/import-export/). Note down the database name and collection name to be referenced in [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=collection%20name%20as-,note%20above,-.%20Update%20the%20connection).
 
