@@ -102,15 +102,11 @@ k. Copy the code from the [link](https://github.com/mongodb-partners/Atlas_to_Re
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob2.png)
 
 
+l. Update the [MongoDB connection](https://www.mongodb.com/docs/guides/atlas/connection-string/) details for mongo_uri, and Database credentials. Update the connection name you noted down in the previous step and provide a [name](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py#:~:text=enter%20the%20database%20name) for the Redshift database.
 
-l. Update the [MongoDB connection](https://www.mongodb.com/docs/guides/atlas/connection-string/) details for [mongo_uri](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py#:~:text=%22mongodb%2Bsrv%3A//%3C-,servernaem,-%3E/%3FretryWrites%3Dtrue%26w), and [Database credentials](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py#:~:text=%22-,database,-%22%3A%20%22%3Cdatabasename). Update the [connection name](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py#:~:text=Enter%20the%20Glue%20Connection%20name%20for%20Redshift) you noted down in the previous step and provide a [name](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py#:~:text=enter%20the%20database%20name) for the Redshift database.
-
-
-
-m. Configure the job name and AWS role in the "Job details" tab. You can keep all the other parameters as default.
+m. Configure the job name and [AWS role](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=note%20down%20the%20role%20name) in the "Job details" tab. You can keep all the other parameters as default.
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/gluejob3.png)
-
 
 
 n. Save the job and click "Run"
