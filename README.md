@@ -8,7 +8,7 @@ The order of the day is Operational analytics, which relies on measuring the exi
 
 ## Why Operational Analytics?
 First and foremost there is an exponential increase in data volumes and their varieties. Traditional DW needs to evolve constantly to meet this demand of changing needs.
-Most recent data are no more tabular in nature. Databases evolved into JSONs, Social logs, Images, Videos, and Time Series format.
+Most recent data are no more tabular in nature. Databases evolved into JSONs, Social logs, Images, Videos, and Time Series formats.
 
 Of late the legacy relational database models are becoming showstoppers for programming and advanced analytics. With the legacy ways of datastore, the performance becomes a big bottleneck as the data grows into terabytes and petabytes.
 
@@ -24,7 +24,7 @@ The data from MongoDB Atlas is synced with Amazon Redshift in a two-step approac
 MongoDB Atlas has direct connectors with Apache Spark. Using the spark connectors the data is migrated from MongoDB Atlas to Redshift as a one-time load.
 
 ### Step2: (Near) Real-Time Data Sync
-With the help of the MongoDB Atlas triggers or Amazon MSK, any delta changes to the database can be continuously written to S3 bucket. From the S3 bucket, data can be loaded into the Redshift either through scheduled AWS Glue jobs or can be accessed as an external table.
+With the help of the MongoDB Atlas triggers or Amazon MSK, any delta changes to the database can be continuously written to the S3 bucket. From the S3 bucket, data can be loaded into the Redshift either through scheduled AWS Glue jobs or can be accessed as an external table.
 
 In this demonstration, we provided step by step approach for each of these scenarios.
 
@@ -62,7 +62,7 @@ b. Configure the MongoDB Atlas cluster [network security](https://www.mongodb.co
 
 c. Load the sample [customer_activity](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/data/customer_activity.json) data to a collection using [MongoDB Compass](https://www.mongodb.com/docs/compass/current/import-export/).
 
-d. Create a [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html).
+d. Create an [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html).
 
 e. Configure the Amazon Redshift Cluster [network security](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-authorize-cluster-access.html) and [access](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html).
 
@@ -81,9 +81,12 @@ h. Create an AWS Glue connection with the Amazon Redshift Database, by following
 
 
 
-  ii) Provide a name for the connection, and select "Amazone Redshift" for the connection type, the Redshift credential created in the last step.
+  ii) Provide a name for the connection and select "Amazon Redshift" for the connection type, use the Redshift credential noted down in the previous step.
+  
+  iii) Note down the connection name.
 
-  Note: The redshift connection name is hardcoded in the python script. Please note down the connection name, if you are giving it differently.
+
+  Note: The redshift connection name is hard coded in the python script. Please note down the connection name, if you are giving it differently.
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueConnection2.png)
 
@@ -96,13 +99,13 @@ j. Select the Spark script editor and click "Create".
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob1.png)
 
 
-k. Copy the code from the [link](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py) to the "script" tab. Overwrite if there is a template code available already.
+k. Copy the code from the [link](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py) to the "Script" tab. Overwrite if there is a template code already available.
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob2.png)
 
 
 
-l. Update the connection details for MongoDB URI and Database credentials. The Redshift connection and Redshift database name are hardcode. Update if required to your values.
+l. Update the [MongoDB connection](https://www.mongodb.com/docs/guides/atlas/connection-string/) details for [mongo_uri](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py#:~:text=%22mongodb%2Bsrv%3A//%3C-,servernaem,-%3E/%3FretryWrites%3Dtrue%26w), and [Database credentials](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py#:~:text=%22-,database,-%22%3A%20%22%3Cdatabasename). Update the [connection name](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py#:~:text=Enter%20the%20Glue%20Connection%20name%20for%20Redshift) you noted down in the previous step and provide a [name](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py#:~:text=enter%20the%20database%20name) for the Redshift database.
 
 
 
