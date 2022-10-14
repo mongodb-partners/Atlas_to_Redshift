@@ -81,7 +81,7 @@ h. Create an AWS Glue connection with the Amazon Redshift Database, by following
 
 
 
-  ii) Provide a name for the connection and select "Amazon Redshift" for the connection type, use the Redshift credentials noted down in the [previous step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=username%20and%20password).
+  ii) Provide a name for the connection and select "Amazon Redshift" for the connection type, use the Redshift credentials noted down in the [previous step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=username%20and%20password%20to%20be%20referencenced%20in%20the-,future%20step,-.).
   
   iii) Note down the connection name to be referencenced in the future step..
 
