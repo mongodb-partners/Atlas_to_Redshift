@@ -10,11 +10,11 @@ The order of the day is Operational analytics, which relies on measuring the exi
 First and foremost there is an exponential increase in data volumes and their varieties. Traditional DW needs to evolve constantly to meet this demand of changing needs.
 Most recent data are no more tabular in nature. Databases evolved into JSONs, Social logs, Images, Videos, and Time Series format.
 
-Of late the legacy relational database models are becoming showstoppers for programming and advanced analytics. With the legacy ways of Datastore, the performance becomes a big bottleneck as the data grows into Terabytes and petabytes.
+Of late the legacy relational database models are becoming showstoppers for programming and advanced analytics. With the legacy ways of datastore, the performance becomes a big bottleneck as the data grows into terabytes and petabytes.
 
 So the need of the hour is to have a cohesive data model, which takes care of both the day-to-day operational data and its past.
 
-Thus the coexistence of Atlas and Redshift evolves as the perfect fit for the business need.
+Thus the coexistence of Atlas and Redshift evolves as the perfect solution for the business need.
 
 ## Integration Framework
 
