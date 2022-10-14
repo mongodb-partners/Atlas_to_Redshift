@@ -58,7 +58,7 @@ g) Tools: [VSCode](https://code.visualstudio.com/), [MongoDB Compass](https://ww
 
 a. Create a [MongoDB Atlas cluster](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster).
 
-b. Configure the MongoDB Atlas cluster [network security](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/) and [access](https://www.mongodb.com/docs/atlas/tutorial/create-mongodb-user-for-cluster/). Note down the the user name and password.
+b. Configure the MongoDB Atlas cluster [network security](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/) and [access](https://www.mongodb.com/docs/atlas/tutorial/create-mongodb-user-for-cluster/). Note down the [connection string](https://www.mongodb.com/docs/guides/atlas/connection-string/), user name and password.
 
 c. Load the sample [customer_activity](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/data/customer_activity.json) data to a collection using [MongoDB Compass](https://www.mongodb.com/docs/compass/current/import-export/). Note down the database name and collection name.
 
@@ -102,7 +102,7 @@ k. Copy the code from the [link](https://github.com/mongodb-partners/Atlas_to_Re
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob2.png)
 
 
-l. Update the [MongoDB connection](https://www.mongodb.com/docs/guides/atlas/connection-string/) details for mongo_uri, and Database credentials. Update the connection name you noted down in the previous step and provide a [name](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py#:~:text=enter%20the%20database%20name) for the Redshift database.
+l. Update the MongoDB connection details for mongo_uri, and Database credentials. Update the connection name you noted down in the previous step and provide a [name](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py#:~:text=enter%20the%20database%20name) for the Redshift database.
 
 m. Configure the job name and [AWS role](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=note%20down%20the%20role%20name) in the "Job details" tab. You can keep all the other parameters as default.
 
