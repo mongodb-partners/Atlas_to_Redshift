@@ -252,7 +252,11 @@ Reference [link](https://docs.aws.amazon.com/redshift/latest/dg/tutorial-query-n
 
 The data thus populated from MongoDB Atlas either through AWS Glue or as a external tables in Redshift can be utilized to train the models . Redshift ML services enables to directly use the Sagemaker Models to train and infer results.
 
-Please refer the [link](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/Scripts/RedshiftML_for_CustomerActivity.sql) for training a model and infer result from the model.
+Please refer the [link](https://docs.aws.amazon.com/redshift/latest/dg/getting-started-machine-learning.html) for training a pre-build model(customer churn model) and infer results.
+
+Note: Steps to be followed in the above link.
+ a. Complete the [Administrative setup](https://docs.aws.amazon.com/redshift/latest/dg/admin-setup.html) 
+ b. The data is already loaded to the Redshift table - "customer activity" and hence you can skips the steps for data loading in the [Tutorial to build customer chrun model](https://docs.aws.amazon.com/redshift/latest/dg/tutorial_customer_churn.html)
 
 
 
