@@ -86,8 +86,6 @@ h. Create an AWS Glue connection with the Amazon Redshift Database, by following
   iii) Note down the connection name.
 
 
-  Note: The redshift connection name is hard coded in the python script. Please note down the connection name, if you are giving it differently.
-
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueConnection2.png)
 
 
