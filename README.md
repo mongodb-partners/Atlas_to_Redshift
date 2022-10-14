@@ -70,10 +70,10 @@ f. Note down the username and password.
 
 g. [Create an AWS role](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions_create-policies.html#:~:text=the%20following%20procedure.-,To%20create,-a%20role%20for) with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies and note down the role name.
 
-h. Create an AWS Glue connection with the Amazon Redshift Database.
+h. Create an AWS Glue connection with the Amazon Redshift Database, by following the below steps.
 
 
-Select "Connector" from the left side menu of AWS Glue Studio. Click "Create Connection" to create a new connection. 
+  i) Select "Connector" from the left side menu of AWS Glue Studio. Click "Create Connection" to create a new connection. 
 
 
 
@@ -81,9 +81,9 @@ Select "Connector" from the left side menu of AWS Glue Studio. Click "Create Con
 
 
 
-Provide a name for the connection, and select "Amazone Redshift" for the connection type, the Redshift credential created in the last step.
+  ii) Provide a name for the connection, and select "Amazone Redshift" for the connection type, the Redshift credential created in the last step.
 
-Note: The redshift connection name is hardcoded in the python script. Please note down the connection name, if you are giving it differently.
+  Note: The redshift connection name is hardcoded in the python script. Please note down the connection name, if you are giving it differently.
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueConnection2.png)
 
@@ -132,7 +132,7 @@ The Change Data Capture(CDC) feature of MongoDB Atlas is utilized to capture rea
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/MSKArchitecture.png)
 
 
-#### With Glue: 
+#### With Glue Studio: 
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/12.AWS%20Glue%20s3tocatalog%20Connections%204.png)
 
@@ -157,7 +157,7 @@ e. Create a [sink connector](https://docs.aws.amazon.com/msk/latest/developergui
 f. Insert the data to MongoDB Atlas collection and ensure the data are written to the S3 bucket.
 
 
-### Step by Step Instructions for setting up Glue Studio Job
+### Step by Step Instructions for setting up Glue Studio
 1. The data from MongoDB Atlas can be continuously written to S3 bucket using the Data Federation and MongoDB Atlas triggers. 
  Please refer to the [link](https://www.mongodb.com/developer/products/atlas/automated-continuous-data-copying-from-mongodb-to-s3/) for the step-by-step instructions to capture the data to S3.
 
