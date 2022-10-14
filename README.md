@@ -66,7 +66,7 @@ d. Create an [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/lat
 
 e. Configure the Amazon Redshift Cluster [network security](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-authorize-cluster-access.html) and [access](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html).
 
-f. Note down the username and password.
+f. Note down the database instance, database name ,username and password.
 
 g. [Create an AWS role](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions_create-policies.html#:~:text=the%20following%20procedure.-,To%20create,-a%20role%20for) with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies and note down the role name.
 
