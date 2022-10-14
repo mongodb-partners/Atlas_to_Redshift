@@ -58,7 +58,7 @@ g) Tools: [VSCode](https://code.visualstudio.com/), [MongoDB Compass](https://ww
 
 a. Create a [MongoDB Atlas cluster](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster).
 
-b. Configure the MongoDB Atlas cluster [network security](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/) and [access](https://www.mongodb.com/docs/atlas/tutorial/create-mongodb-user-for-cluster/). Note down the [connection string](https://www.mongodb.com/docs/guides/atlas/connection-string/), user name and password.
+b. Configure the MongoDB Atlas cluster [network security](https://www.mongodb.com/docs/atlas/security/add-ip-address-to-list/) and [access](https://www.mongodb.com/docs/atlas/tutorial/create-mongodb-user-for-cluster/). Note down the [connection string](https://www.mongodb.com/docs/guides/atlas/connection-string/), user name and password to be referencenced in the future step.
 
 c. Load the sample [customer_activity](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/data/customer_activity.json) data to a collection using [MongoDB Compass](https://www.mongodb.com/docs/compass/current/import-export/). Note down the database name and collection name.
 
@@ -66,7 +66,7 @@ d. Create an [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/lat
 
 e. Configure the Amazon Redshift Cluster [network security](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-authorize-cluster-access.html) and [access](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html).
 
-f. Note down the database instance, database name ,username and password.
+f. Note down the database instance, database name ,username and password to be referencenced in the future step.
 
 g. [Create an AWS role](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions_create-policies.html#:~:text=the%20following%20procedure.-,To%20create,-a%20role%20for) with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies and note down the role name.
 
@@ -83,7 +83,7 @@ h. Create an AWS Glue connection with the Amazon Redshift Database, by following
 
   ii) Provide a name for the connection and select "Amazon Redshift" for the connection type, use the [Redshift credentials](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=username%20and%20password) noted down in the previous step.
   
-  iii) Note down the connection name.
+  iii) Note down the connection name to be referencenced in the future step..
 
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueConnection2.png)
