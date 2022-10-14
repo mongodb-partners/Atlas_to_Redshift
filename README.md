@@ -66,7 +66,7 @@ d. Create an [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/lat
 
 e. Configure the Amazon Redshift Cluster [network security](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-authorize-cluster-access.html) and [access](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html).
 
-f. Note down the database instance, database name ,username and password to be referencenced in the [future step] (https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=down%20in%20the-,previous%20step,-.).
+f. Note down the database instance, database name ,username and password to be referencenced in the [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=down%20in%20the-,previous%20step,-.).
 
 g. [Create an AWS role](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions_create-policies.html#:~:text=the%20following%20procedure.-,To%20create,-a%20role%20for) with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies and note down the role name.
 
@@ -81,7 +81,7 @@ h. Create an AWS Glue connection with the Amazon Redshift Database, by following
 
 
 
-  ii) Provide a name for the connection and select "Amazon Redshift" for the connection type, use the Redshift credentials noted down in the [previous step]((https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=username%20and%20password)).
+  ii) Provide a name for the connection and select "Amazon Redshift" for the connection type, use the Redshift credentials noted down in the [previous step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=username%20and%20password).
   
   iii) Note down the connection name to be referencenced in the future step..
 
