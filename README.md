@@ -68,7 +68,7 @@ e. Configure the Amazon Redshift Cluster [network security](https://docs.aws.ama
 
 f. Note down the user name and password.
 
-g. create AWS role with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies and note down the role name.
+g. [create AWS role](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions_create-policies.html#:~:text=the%20following%20procedure.-,To%20create,-a%20role%20for)  with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies and note down the role name.
 
 g. Create a AWS Glue connection with the Amazon Redshift Database
 
