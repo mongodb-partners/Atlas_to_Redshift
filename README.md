@@ -67,7 +67,7 @@ d. Create an [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/lat
 e. Configure the Amazon Redshift Cluster [network security](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-authorize-cluster-access.html) and [access](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html).
 
 
-![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/redshiftoutput.png)
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Redshiftfinal.png)
 
 
 f. Note down the database instance, database name ,username and password to be referenced in the [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=down%20in%20the-,previous%20step,-.).
