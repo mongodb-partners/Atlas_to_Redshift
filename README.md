@@ -114,6 +114,19 @@ n. Save the job and click "Run"
 o. Ensure the job ran successfully 
 
 p. Validate the table and data in Redshift.
+    
+   i. Search for Redshift in AWS services.
+      
+   ii. Open the Redshift service.
+      
+   iii. select the database created.
+      
+   iv. select "Query" from the left side panel.
+   
+   v. Run the select query for the Redshift table created earlier, to validate the results.
+   
+        select * from customer_activity
+          
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/redshiftoutput.png)
 
