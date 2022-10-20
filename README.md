@@ -87,10 +87,15 @@ h. Create an AWS Glue connection with the Amazon Redshift Database, by following
 
   ii) Provide a name for the connection and select "Amazon Redshift" for the connection type, use the Redshift credentials noted down in the [previous step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=password%20to%20be%20referenced-,in%20the,-future%20step.).
   
-  iii) Note down the connection name to be referenced in the [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=down%20in%20the-,previous%20step,-and%20provide%20a).
+  iii) select the default VPC and a subnet - preferably Public for testing. (For prod environment, choose with the least access security model).
+  
+  iv) Note down the connection name to be referenced in the [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=down%20in%20the-,previous%20step,-and%20provide%20a).
 
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/GlueConnection2.png)
+
+
+  v) You can test the Connection using AWS Glue service.(Not AWS Glue studio) .  Select the "Connections" from Legay Services and choose the connection you created and select "Test Connection".
 
 
 i. Create a glue job in AWS Glue studio.
