@@ -87,7 +87,7 @@ h. Create an AWS Glue connection with the Amazon Redshift Database, by following
 
   ii) Provide a name for the connection and select "Amazon Redshift" for the connection type, use the Redshift credentials noted down in the [previous step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=password%20to%20be%20referenced-,in%20the,-future%20step.).
   
-  iii) select the default VPC and a subnet - preferably Public for testing. (For prod environment, choose with the least access security model).
+  iii) select the default VPC and a subnet - preferably Public Subnet for testing. (For prod environment, choose with the least access security model).
   
   iv) Note down the connection name to be referenced in the [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=down%20in%20the-,previous%20step,-and%20provide%20a).
 
