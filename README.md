@@ -62,7 +62,7 @@ b. Configure the MongoDB Atlas cluster [network security](https://www.mongodb.co
 
 c. Load the sample [customer_activity](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/data/customer_activity.json) data to a collection using [MongoDB Compass](https://www.mongodb.com/docs/compass/current/import-export/). Note down the database name and collection name to be referenced in [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=collection%20name%20as-,note%20above,-.%20Update%20the%20connection).
 
-d. Create an [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html).
+d. Create an [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html) and ensure the roles are created and associated with cluster.
 
 e. Configure the Amazon Redshift Cluster [network security](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-authorize-cluster-access.html) and [access](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html).
 
@@ -77,7 +77,7 @@ Ensure the Redshift cluster is accessible from outside VPC , by enabling the "Mo
 
 f. Note down the database instance, database name ,username and password to be referenced in the [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=down%20in%20the-,previous%20step,-.).
 
-g. [Create an AWS role](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions_create-policies.html#:~:text=the%20following%20procedure.-,To%20create,-a%20role%20for) with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies and note down the role name.
+g. [Create an AWS role](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions_create-policies.html#:~:text=the%20following%20procedure.-,To%20create,-a%20role%20for) with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies to be used for the Glue Job and note down the role name.
 
 h. Create an AWS Glue connection with the Amazon Redshift Database, by following the below steps.
 
