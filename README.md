@@ -104,7 +104,10 @@ h. Create an AWS Glue connection with the Amazon Redshift Database, by following
   ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/s3%20endpoint.png)
   
 
-  v) You can test the Connection using AWS Glue service.(Not AWS Glue studio) .  Select the "Connections" from Legay Services and choose the connection you created and select "Test Connection".
+  vi) You can test the Connection using AWS Glue service.(Not AWS Glue studio) .  Select the "Connections" from Legay Services and choose the connection you created and select "Test Connection".
+
+
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Glue%20connection%20testing.png)
 
 
 i. Create a glue job in AWS Glue studio.
