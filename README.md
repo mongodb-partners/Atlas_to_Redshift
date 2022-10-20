@@ -69,7 +69,7 @@ e. Configure the Amazon Redshift Cluster [network security](https://docs.aws.ama
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Redshiftfinal.png)
 
-Ensure the Redshift cluster is accessible from outside VPC , by enabling the "Allow instances and devices outside the VPC to connect to the database". 
+Ensure the Redshift cluster is accessible from outside VPC , by enabling the "Modify publicly accessible setting". All other options are default.
 
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Redshift%20public%20access.png)
