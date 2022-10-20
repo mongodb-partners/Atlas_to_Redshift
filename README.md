@@ -62,7 +62,7 @@ b. Configure the MongoDB Atlas cluster [network security](https://www.mongodb.co
 
 c. Load the sample [customer_activity](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/data/customer_activity.json) data to a collection using [MongoDB Compass](https://www.mongodb.com/docs/compass/current/import-export/). Note down the database name and collection name to be referenced in [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=collection%20name%20as-,note%20above,-.%20Update%20the%20connection).
 
-d. Create an [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html) and ensure the roles are created and associated with cluster.
+d. Create an [Amazon Redshift Cluster ](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html) and ensure the roles are created and associated with cluster as recommended in the link for creation.
 
 e. Configure the Amazon Redshift Cluster [network security](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-authorize-cluster-access.html) and [access](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html).
 
