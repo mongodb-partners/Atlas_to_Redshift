@@ -69,6 +69,11 @@ e. Configure the Amazon Redshift Cluster [network security](https://docs.aws.ama
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Redshiftfinal.png)
 
+Ensure the Redshift cluster is accessible from outside VPC , by enabling the "Allow instances and devices outside the VPC to connect to the database". 
+
+
+![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/redshiftoutput.png)
+
 
 f. Note down the database instance, database name ,username and password to be referenced in the [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=down%20in%20the-,previous%20step,-.).
 
