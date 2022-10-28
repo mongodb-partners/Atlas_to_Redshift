@@ -29,16 +29,70 @@ job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
 ## setup the MongoDB Credentials ###
+def get_secret():
 
-mongo_uri = "mongodb+srv://<servernaem>/?retryWrites=true&w=majority" ####update the servername
+    secret_name = "<<SECRET_NAME>>"
+    region_name = "<<REGION_NAME>>"
+
+    # Create a Secrets Manager client
+    session = boto3.session.Session()
+    client = session.client(
+        service_name='secretsmanager',
+        region_name=region_name
+    )
+
+    # In this sample we only handle the specific exceptions for the 'GetSecretValue' API.
+    # See https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
+    # We rethrow the exception by default.
+
+    try:
+        get_secret_value_response = client.get_secret_value(
+            SecretId=secret_name
+        )
+    except ClientError as e:
+        if e.response['Error']['Code'] == 'DecryptionFailureException':
+            # Secrets Manager can't decrypt the protected secret text using the provided KMS key.
+            # Deal with the exception here, and/or rethrow at your discretion.
+            raise e
+        elif e.response['Error']['Code'] == 'InternalServiceErrorException':
+            # An error occurred on the server side.
+            # Deal with the exception here, and/or rethrow at your discretion.
+            raise e
+        elif e.response['Error']['Code'] == 'InvalidParameterException':
+            # You provided an invalid value for a parameter.
+            # Deal with the exception here, and/or rethrow at your discretion.
+            raise e
+        elif e.response['Error']['Code'] == 'InvalidRequestException':
+            # You provided a parameter value that is not valid for the current state of the resource.
+            # Deal with the exception here, and/or rethrow at your discretion.
+            raise e
+        elif e.response['Error']['Code'] == 'ResourceNotFoundException':
+            # We can't find the resource that you asked for.
+            # Deal with the exception here, and/or rethrow at your discretion.
+            raise e
+    else:
+        # Decrypts secret using the associated KMS key.
+        # Depending on whether the secret is a string or binary, one of these fields will be populated.
+        if 'SecretString' in get_secret_value_response:
+            secret = get_secret_value_response['SecretString']
+            secrets_json = json.loads(secret)
+            return (secrets_json['USERNAME'], secrets_json['PASSWORD'], secrets_json['SERVER_ADDR'])
+        else:
+            decoded_binary_secret = base64.b64decode(get_secret_value_response['SecretBinary'])
+            return decoded_binary_secret
+            
+
+user_name, password, server_addr = get_secret()
+
+mongo_uri = "mongodb+srv://{}.mongodb.net/?retryWrites=true&w=majority'".format(server_addr) 
 
 ## Read from the MongoDB Atlas ###
 read_mongo_options = {
     "uri": mongo_uri,
     "database": "<databasename>",   #update the databasename
     "collection": "<collection>", #update the collection
-    "username": "<username>",  #update the username
-    "password": "<password>"  #update the password
+    "username": user_name, #"s3load",  #update the username
+    "password": password #"s3load"  #update the password
 }
 
 ## Read from the MongoDB Atlas ###
