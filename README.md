@@ -79,7 +79,14 @@ f. Create the table using [sql](https://github.com/mongodb-partners/Atlas_to_Red
 
 g. [Create an AWS role](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions_create-policies.html#:~:text=the%20following%20procedure.-,To%20create,-a%20role%20for) with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies to be used for the Glue Job and note down the role name.
 
-h. Create an AWS Glue connection with the Amazon Redshift Database, by following the below steps.
+h. store the database credentials as secrets using the AWS Secret Manager 
+
+<img width="731" alt="image" src="https://user-images.githubusercontent.com/101570105/227151331-651dc497-1ef5-402f-ac66-b9dc4097e25b.png">
+
+Note down the secret name
+
+
+j. Create an AWS Glue connection with the Amazon Redshift Database, by following the below steps.
 
 
   i) Select "Connector" from the left side menu of AWS Glue Studio. Click "Create Connection" to create a new connection. 
@@ -110,31 +117,31 @@ h. Create an AWS Glue connection with the Amazon Redshift Database, by following
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Glue%20connection%20testing.png)
 
 
-i. Create a glue job in AWS Glue studio.
+k. Create a glue job in AWS Glue studio.
 
 
-j. Select the Spark script editor and click "Create".
+l. Select the Spark script editor and click "Create".
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob1.png)
 
 
-k. Copy the code from the [link](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py) to the "Script" tab. Overwrite if there is a template code already available.
+m. Copy the code from the [link](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py) to the "Script" tab. Overwrite if there is a template code already available.
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Gluejob2.png)
 
 
-l. Update the MongoDB connection details for mongo_uri, and MongoDB Database credentials noted down in the [previous step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=name%20and%20password%20to%20be%20referencenced%20in%20the-,future%20step,-.). Update the Database name and collection name as [note above](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=to%20be%20referenced-,in%20future%20step,-.). Update the connection name you noted down in the [previous step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=name%20to%20be%20referenced%20in%20the-,future%20step,-.) and provide a [name](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py#:~:text=enter%20the%20database%20name) for the Redshift database.
+n. Update the MongoDB connection details for mongo_uri, and MongoDB Database credentials noted down in the [previous step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=name%20and%20password%20to%20be%20referencenced%20in%20the-,future%20step,-.). Update the Database name and collection name as [note above](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=to%20be%20referenced-,in%20future%20step,-.). Update the connection name you noted down in the [previous step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=name%20to%20be%20referenced%20in%20the-,future%20step,-.) and provide a [name](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/glue_pyspark_atlas_to_redshift.py#:~:text=enter%20the%20database%20name) for the Redshift database.
 
-m. Configure the job name and [AWS role](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=note%20down%20the%20role%20name) in the "Job details" tab. You can keep all the other parameters as default.
+o. Configure the job name and [AWS role](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=note%20down%20the%20role%20name) in the "Job details" tab. You can keep all the other parameters as default.
 
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/gluejob3.png)
 
 
-n. Save the job and click "Run"
+p. Save the job and click "Run"
 
-o. Ensure the job ran successfully 
+q. Ensure the job ran successfully 
 
-p. Validate the table and data in Redshift as described below.
+r. Validate the table and data in Redshift as described below.
     
   i. Search for Redshift in AWS search bar.
 
