@@ -79,7 +79,7 @@ f. Create the table using [sql](https://github.com/mongodb-partners/Atlas_to_Red
 
 g. [Create an AWS role](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions_create-policies.html#:~:text=the%20following%20procedure.-,To%20create,-a%20role%20for) with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies to be used for the Glue Job and note down the role name.
 
-h. store the database credentials as secrets using the AWS Secret Manager 
+h. Store the database credentials as secrets using the AWS Secret Manager 
 
 <img width="731" alt="image" src="https://user-images.githubusercontent.com/101570105/227151331-651dc497-1ef5-402f-ac66-b9dc4097e25b.png">
 
