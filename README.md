@@ -75,7 +75,7 @@ Ensure the Redshift cluster is accessible from outside VPC , by enabling the "Mo
 ![](https://github.com/Babusrinivasan76/atlastoredshift/blob/main/images/Redshift%20public%20access.png)
 
 
-f. Create the table using [sql](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/code/data/create_customer_activity.sql) in the Query editor of Redshift. Note down the database instance, database name ,username and password to be referenced in the [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=down%20in%20the-,previous%20step,-.).
+f. Note down the database instance, database name ,username and password to be referenced in the [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=down%20in%20the-,previous%20step,-.).
 
 g. [Create an AWS role](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions_create-policies.html#:~:text=the%20following%20procedure.-,To%20create,-a%20role%20for) with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies to be used for the Glue Job and note down the role name.
 
