@@ -31,8 +31,8 @@ job.init(args['JOB_NAME'], args)
 ## setup the MongoDB Credentials ###
 def get_secret():
 
-    secret_name = "<<SECRET_NAME>>"
-    region_name = "<<REGION_NAME>>"
+    secret_name = "<<SECRET_NAME>>" #update the Secret name
+    region_name = "<<REGION_NAME>>"  #update the Region
 
     # Create a Secrets Manager client
     session = boto3.session.Session()
@@ -91,8 +91,8 @@ read_mongo_options = {
     "uri": mongo_uri,
     "database": "<databasename>",   #update the databasename
     "collection": "<collection>", #update the collection
-    "username": user_name, #"s3load",  #update the username
-    "password": password #"s3load"  #update the password
+    "username": user_name, 
+    "password": password 
 }
 
 ## Read from the MongoDB Atlas ###
