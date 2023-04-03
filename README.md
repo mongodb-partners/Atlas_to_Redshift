@@ -77,7 +77,20 @@ Ensure the Redshift cluster is accessible from outside VPC , by enabling the "Mo
 
 f. Note down the database instance, database name ,username and password to be referenced in the [future step](https://github.com/mongodb-partners/Atlas_to_Redshift/blob/main/README.md#:~:text=down%20in%20the-,previous%20step,-.).
 
-g. [Create an AWS role](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions_create-policies.html#:~:text=the%20following%20procedure.-,To%20create,-a%20role%20for) with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies to be used for the Glue Job and note down the role name.
+g. [Create an AWS role](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions_create-policies.html#:~:text=the%20following%20procedure.-,To%20create,-a%20role%20for) with AmazonDMSRedshiftS3Role and AWSGlueServiceRole policies to be used for the Glue Job. Add an in-line policy to grant access to the secrets and note down the role name.
+
+<img width="1475" alt="image" src="https://user-images.githubusercontent.com/101570105/229477821-67fcdf39-405e-41da-83ca-e49bd69458e7.png">
+
+in-line policy template
+
+                    {
+                "Version": "2012-10-17",
+                "Statement": {
+                    "Effect": "Allow",
+                    "Action": "secretsmanager:GetSecretValue",
+                    "Resource": "arn:aws:secretsmanager:<region>:<accountid>:secret:<secretname>"
+                              }
+                    }
 
 h. Store the database credentials as secrets using the AWS Secret Manager 
 
